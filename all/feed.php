@@ -1,0 +1,204 @@
+<?php
+	top('Главная');
+?>
+<div class="video_block">
+<ul class="disin">
+
+<?php
+	
+	$videos=mysqli_query($CONNECT,"SELECT * FROM `videos` ORDER BY id DESC");
+	
+	while($all_videos=mysqli_fetch_array($videos))
+                  {
+					  echo "<li class='disin'>
+					<div style='margin-left:20px;' class='cont_video'>
+        			<div class='title' id='vd".$all_videos['id']."'>
+                	<a href='".$all_videos['url_video']."'>
+                		<img src='".$all_videos['path_image']."' width='196' height='110' style='padding-top:6px' alt=''/>
+                    </a>
+                 	<span class='time'>".$all_videos['time_video']."</span>
+                    <span id='imv".$all_videos['id']."' hidden=''>
+                    <a href='".$all_videos['url_video']."'>
+                    	<img src='img/v_hover.png' width='196' height='110' alt=''/>
+                        </a>
+                    </span>
+                 </div>
+            		<div>
+                    	<a href='".$all_videos['url_video']."'>".$all_videos['name_video']."</a>
+                    </div>
+            		<div class='profile'>".$all_videos['user_video']." </div>
+					<div class='count_view'>".$all_videos['watch_video']." просмотров · ".$all_videos['date_add']."</div>
+       				</div>
+    				</li>";	
+                  }
+?>
+</ul>
+</div>
+<div style="margin:10px;">&nbsp</div>
+<?php
+	bottom();
+?>
+<script>
+$(function(){
+  $('#vd1').hover(function(){
+	  $("span[id='imv1']").addClass("img_hover");
+    $("span[id='imv1']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv1']").fadeOut("slow");
+   });
+ });
+ $(function(){
+  $('#vd2').hover(function(){
+	$("span[id='imv2']").addClass("img_hover");
+    $("span[id='imv2']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv2']").fadeOut("slow");
+   });
+ });
+ $(function(){
+  $('#vd3').hover(function(){
+	$("span[id='imv3']").addClass("img_hover");
+    $("span[id='imv3']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv3']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd4').hover(function(){
+	$("span[id='imv4']").addClass("img_hover");
+    $("span[id='imv4']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv4']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd5').hover(function(){
+	$("span[id='imv5']").addClass("img_hover");
+    $("span[id='imv5']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv5']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd6').hover(function(){
+	$("span[id='imv6']").addClass("img_hover");
+    $("span[id='imv6']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv6']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd7').hover(function(){
+	$("span[id='imv7']").addClass("img_hover");
+    $("span[id='imv7']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv7']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd8').hover(function(){
+	$("span[id='imv8']").addClass("img_hover");
+    $("span[id='imv8']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv8']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd9').hover(function(){
+	$("span[id='imv9']").addClass("img_hover");
+    $("span[id='imv9']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv9']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd10').hover(function(){
+	$("span[id='imv10']").addClass("img_hover");
+    $("span[id='imv10']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv10']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd11').hover(function(){
+	$("span[id='imv11']").addClass("img_hover");
+    $("span[id='imv11']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv11']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd12').hover(function(){
+	$("span[id='imv12']").addClass("img_hover");
+    $("span[id='imv12']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv12']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd13').hover(function(){
+	$("span[id='imv13']").addClass("img_hover");
+    $("span[id='imv13']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv13']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd14').hover(function(){
+	$("span[id='imv14']").addClass("img_hover");
+    $("span[id='imv14']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv14']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd15').hover(function(){
+	$("span[id='imv15']").addClass("img_hover");
+    $("span[id='imv15']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv15']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd16').hover(function(){
+	$("span[id='imv16']").addClass("img_hover");
+    $("span[id='imv16']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv16']").fadeOut("slow");
+   });
+ });
+  $(function(){
+  $('#vd17').hover(function(){
+	$("span[id='imv17']").addClass("img_hover");
+    $("span[id='imv17']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv17']").fadeOut("slow");
+   });
+ });
+   $(function(){
+  $('#vd18').hover(function(){
+	$("span[id='imv18']").addClass("img_hover");
+    $("span[id='imv18']").fadeIn("slow");
+   },
+   function(){
+    $("span[id='imv18']").fadeOut("slow");
+   });
+ });
+</script>
