@@ -19,33 +19,7 @@
 	
 
 
-	$query2t = mysqli_query($CONNECT, "SELECT * FROM `name` LEFT JOIN `descs` using(id)");
 	
-	//var_dump($query2t);
-	
-		echo "<pre style='color:white'>";
-		?>
-		<table style="color: white">
-		<?
-		while($rw = mysqli_fetch_assoc($query2t)){
-			?>
-					<tr>
-						<td><? echo $rw['name'] ?></td><td><? 
-				if(is_null($rw['dist']))	{
-					echo "errrrr";
-				}		else{
-				echo $rw['dist']; }
-						?></td>
-					</tr>
-				
-			<?
-		}
-			?>
-			</table>
-			<?
-
-
-		echo "</pre>";
 	
 	
 
