@@ -1,4 +1,5 @@
 <?
+	
     $url_array = explode('/',$_SERVER['REQUEST_URI']);  
     $video_id = $url_array[2];
     $query = mysqli_query($CONNECT, "SELECT * FROM `videos` WHERE `id` = '$video_id'");
@@ -12,6 +13,42 @@
 		echo "error";
 		exit();
 	}
+
+	$a = array("a","b","c");
+	
+	
+
+
+	$query2t = mysqli_query($CONNECT, "SELECT * FROM `name` LEFT JOIN `descs` using(id)");
+	
+	//var_dump($query2t);
+	
+		echo "<pre style='color:white'>";
+		?>
+		<table style="color: white">
+		<?
+		while($rw = mysqli_fetch_assoc($query2t)){
+			?>
+					<tr>
+						<td><? echo $rw['name'] ?></td><td><? 
+				if(is_null($rw['dist']))	{
+					echo "errrrr";
+				}		else{
+				echo $rw['dist']; }
+						?></td>
+					</tr>
+				
+			<?
+		}
+			?>
+			</table>
+			<?
+
+
+		echo "</pre>";
+	
+	
+
 	//просмотры
     $views = $row['watch_video'];
    	$views++;
@@ -85,7 +122,7 @@
     <p style="padding-bottom:10px">
     	<strong>Комментарии (<? echo $count_comments; ?>)</strong>
     </p>
-    <? if ($_SESSION['id']): ?>
+    <? if (isset($_SESSION['id'])): ?>
           <label id="error" style="color: red"></label>
            <form action="../comment" method="post" id="commentary" enctype="multipart/form-data">
             <div class="add_comment clear">
@@ -98,7 +135,7 @@
 		   </form>
     <? endif; ?>
     
-    <? if (!$_SESSION['id']): ?>
+    <? if (!(isset($_SESSION['id']))): ?>
             <div align="center"><p><strong>Пожалуйста, авторизируйтесь для написания комментария.</strong></p></div>
     <? endif; ?>
     
@@ -124,7 +161,7 @@
                 	<a href="/<?php echo $videos['url_video'] ?>">
                 		<img src="../<?php echo $videos['path_image'] ?>" width="150" height="80" alt=""/>
                     </a>
-                 	<span class="time_for_vid"><?php echo $videos['time_video'] ?></span>
+                 	
               </div>
             	<div>
             		<a href="/<?php echo $videos['url_video']?>"><?php echo $videos['name_video'] ?></a></div>
